@@ -19,5 +19,8 @@
 
 * Para executar o programa, basta baixar o ambiente Processing (https://processing.org/download/) e abrir os arquivos .pde com ele.
 
+# Funcionamento
 
-
+<p align="center">
+  <img src="https://github.com/GabrielScalici/Rockets_Evolutivos/blob/master/visualization/animation.gif"/>
+</p>
