@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://media.giphy.com/media/3oKIPtjElfqwMOTbH2/giphy.gif"/>
-  <h1 align="center"> Sistema Evolutivo - Rocket </h1>
+  <h1 align="center"> Sistema Evolutivo - Foguetes Inteligentes </h1>
   <p align="center"> ICMC - USP  </p>
 </p>
 
