@@ -1,0 +1,33 @@
+* { max-width: 40em; max-width: 150ch; }
+
+h1,h2,h3,a {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  transition-timing-function: ease
+}
+
+h1:hover,h2:hover,h3:hover,a:hover {
+    color: #f67280;
+}
+
+#toc_container {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #aaa;
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: auto;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li {
+  list-style: outside none none !important;
+}

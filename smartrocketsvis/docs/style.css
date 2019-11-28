@@ -1,0 +1,12 @@
+h1,a {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  transition-timing-function: ease
+}
+
+h1:hover,a:hover {
+    color: #f67280;
+}
