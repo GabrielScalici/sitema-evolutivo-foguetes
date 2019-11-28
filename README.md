@@ -5,14 +5,19 @@
 </p>
 
 <p align="center">
-  <img src="https://forthebadge.com/images/badges/made-with-p5.svg"/>
+  <img src="https://forthebadge.com/images/badges/made-with-java.svg"/>
 </p>
 
 
-# :package: Conteúdo
+# Projeto
 
-* Exercícios de treinamento
+* Como indivíduos aleatoriamente gerados podem chegar até um objetivo não colidindo com obstáculos?
 
-* Exemplos de aula
+* O problema abordado no trabalho é uma população de foguetes que possui um motor e aplica forças de formas aleatórias em seus corpos e um ponto final onde devem pousar; mas há paredes entre eles e o ponto final e elas precisam ser contornadas. Após as primeiras falhas, a ideia é que nossos indivíduos consigam evoluir e ficar mais inteligentes. Mas como?
 
-* Trabalhos Finais da disciplina
+# Como rodar
+
+* Para executar o programa, basta baixar o ambiente Processing (https://processing.org/download/) e abrir os arquivos .pde com ele.
+
+
+
