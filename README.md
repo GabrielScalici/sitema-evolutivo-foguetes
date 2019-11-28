@@ -25,7 +25,7 @@
 
 # Algoritmo
 
-* A melhor parte disso tudo, é sua simplicidade em todos os passos: o princípio é fazer com que os indivíduos mais aptos gerem descendentes, que se tornarão aptos e farão o mesmo para as próximas gerações. Esses indivíduos serão colocados em uma mating pool, uma piscina genética, de onde serão sorteados os pares reprodutivos.
+* Os indivíduos serão colocados em uma mating pool, uma piscina genética, de onde serão sorteados os pares reprodutivos.
 
 * Isso é feito calculando uma nota para cada indivíduo, que, no nosso caso é dada pelo inverso da distância ao alvo dividida pelo tempo de fim e, ao final, elevada à quarta para que o resultado fique exponencial; além disso, se o indivíduo consegue chegar no alvo, a sua nota é dobrada; e se colide com alguma parede, perde 90% da nota. Essa função é assim porque damos importância tanto para a chegada ao objetivo quanto para o caminho feito (não deve haver colisões).
 
