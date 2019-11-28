@@ -15,6 +15,10 @@
 
 * O problema abordado no trabalho é uma população de foguetes que possui um motor e aplica forças de formas aleatórias em seus corpos e um ponto final onde devem pousar; mas há paredes entre eles e o ponto final e elas precisam ser contornadas. Após as primeiras falhas, a ideia é que nossos indivíduos consigam evoluir e ficar mais inteligentes.
 
+# Referência
+
+* https://www.youtube.com/watch?v=bGz7mv2vD6g&t=90s
+
 # Como rodar
 
 * Para executar o programa, basta baixar o ambiente Processing (https://processing.org/download/) e abrir os arquivos .pde com ele.
