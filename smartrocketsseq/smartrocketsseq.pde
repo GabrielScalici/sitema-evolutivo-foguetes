@@ -8,7 +8,7 @@ int samplesPerFrame = 5;
 float shutterAngle = 1.5;
 int[][] result;
 
-boolean recording = false;
+boolean recording = true;
 int numFrames = 1500;
 PFont font;
 
@@ -74,8 +74,8 @@ class TImage extends PImage implements Runnable {
 
 int lifetime = 300; // duration of a generation
 
-int num_populations = 1000; // number of populations
-int population_size = 90; // individuals in each population
+int num_populations = 1; // number of populations
+int population_size = 20; // individuals in each population
 
 int finished_counter = 0;
 
@@ -129,7 +129,7 @@ class DNA {
     }
 
     // Let's give each Rocket an extra boost of strength for its first frame
-    genes[0].normalize();
+    //genes[0].normalize();
   }
 
   // Constructor #2, creates the instance based on an existing array
@@ -305,6 +305,7 @@ class Rocket {
 
   float getFitness() {
     return fitness;
+    
   }
 
   DNA getDNA() {
@@ -337,7 +338,7 @@ class Population {
     // make a new set of rockets
     for (int i = 0; i < population.length; i++) {
       PVector position = new PVector(width/2,height+20);
-      population[i] = new Rocket(position, new DNA(),population.length);
+      population[i] = new Rocket(position, new DNA(), population.length);
     }
   }
 
@@ -353,6 +354,8 @@ class Population {
 
     // Calculate total fitness of whole population
     float maxFitness = getMaxFitness();
+    
+    println(maxFitness);
 
     // Calculate fitness for each member of the population (scaled to value between 0 and 1)
     for (int i = 0; i < population.length; i++) {
@@ -383,7 +386,7 @@ class Population {
       child.mutate(mutationRate);
       // Fill the new population with the new child
       PVector position = new PVector(width/2,height+20);
-      population[i] = new Rocket(position, child,population.length);
+      population[i] = new Rocket(position, child, population.length);
     }
     generations++;
   }
@@ -392,16 +395,51 @@ class Population {
     return generations;
   }
 
+
+
+
   // Find highest fintess for the population
   float getMaxFitness() {
+    float avarage = 0;
     float record = 0;
+    
+      // results csv
+    //Table results = new Table();
+    //results.addColumn("avarage");
+    //results.addColumn("max");
+  
+    //// assets
+    //font = loadFont("CMUSerif-BoldItalic-64.vlw");
+    //textFont(font, 18);
+    
+    //TableRow newRow = results.addRow();
+  
+    // motion blur matrix
+    //result = new int[width*height][3];
+    
     for (int i = 0; i < population.length; i++) {
        if(population[i].getFitness() > record) {
          record = population[i].getFitness();
        }
+       avarage += population[i].getFitness();
     }
+    
+    println(avarage/population.length);
+    
+    //newRow.setFloat(1, avarage);
+    //newRow.setFloat(1, record);
+    
+    //results.addRow(avarage, record);
+    
+    
+    //saveTable(results, "data/sequential_ " + num_populations + "_" + population_size + ".csv");
+    
     return record;
   }
+  
+  
+  
+  
 
   void run() {
     while (!criteria_met) {
@@ -422,7 +460,7 @@ class Population {
         fitness();
         selection();
         reproduction();
-        // println("POPULAÇÃO [" + t.getId() + "] - Nova Geração: " + generations);
+        //println("POPULAÇÃO [" + t.getId() + "] - Nova Geração: " + generations);
       }
     }
     println("POPULAÇÃO " + id + " - OBJETIVO CONCLUÍDO. Geração: " + generations);
@@ -444,6 +482,8 @@ void setup() {
 
   results.addColumn("test_id");
   results.addColumn("time");
+  results.addColumn("avarage");
+  results.addColumn("max");
 
   // assets
   font = loadFont("CMUSerif-BoldItalic-64.vlw");
@@ -453,8 +493,8 @@ void setup() {
   result = new int[width*height][3];
 
   
-  // run 100 tests
-  for (int i = 0; i < 100; i++) {
+  // run 1 tests
+  for (int i = 0; i < 1; i++) {
     // write results csv
     TableRow newRow = results.addRow();
     newRow.setInt("test_id", i+1);
@@ -473,7 +513,7 @@ void setup() {
     }
     // finished, save time elapsed
     timer = millis() - start;
-    println("TIME ELAPSED: " + timer);
+    //println("TIME ELAPSED: " + timer);
     newRow.setInt("time", timer);
   }
 

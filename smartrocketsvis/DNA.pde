@@ -16,7 +16,7 @@ class DNA {
     }
 
     // Let's give each Rocket an extra boost of strength for its first frame
-    genes[0].normalize();
+    //genes[0].normalize();
   }
 
   // Constructor #2, creates the instance based on an existing array
@@ -57,4 +57,3 @@ class DNA {
     }
   }
 }
-

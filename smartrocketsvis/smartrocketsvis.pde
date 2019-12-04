@@ -5,10 +5,10 @@
 
 // motion blur settings
 int samplesPerFrame = 5;
-float shutterAngle = 1.5;
+float shutterAngle = 2.5;
 int[][] result;
 
-boolean recording = false;
+boolean recording = true;
 int numFrames = 1500;
 PFont font;
 
@@ -50,7 +50,7 @@ void draw() {
       TImage frame = new TImage(width,height,RGB,sketchPath("frames/frame_"+nf(frameCount,3)+".png"));
       frame.set(0,0,get());
       frame.saveThreaded();
-      println(frameCount,"/",numFrames);
+      //println(frameCount,"/",numFrames);
     }
 }
 
@@ -75,19 +75,10 @@ class TImage extends PImage implements Runnable {
 // colors for populations
 color[] colors = {  
                     #ff7657, 
-                    #665c84, 
-                    #a26ea1, 
-                    #f18a9b, 
-                    #ffb480,
-                    #a26ea1,
-                    #f18a9b,
-                    #ffb480,
-                    #ffba5a,
-                    #45315d
                 };
 
 int lifetime;  // how long should each generation live
-int population_size = 5;
+int population_size = 40;
 
 // one color per population
 Population[] populations = new Population[colors.length];
@@ -114,7 +105,7 @@ void setup() {
   result = new int[width*height][3];
   
   // number of cycles for a generation
-  lifetime = 300;
+  lifetime = 600;
 
   lifecycle = 0;
   

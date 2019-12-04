@@ -89,12 +89,15 @@ class Population {
 
   // Find highest fintess for the population
   float getMaxFitness() {
+    float avarage = 0;
     float record = 0;
     for (int i = 0; i < population.length; i++) {
        if(population[i].getFitness() > record) {
          record = population[i].getFitness();
+         avarage += population[i].getFitness();
        }
     }
+    println(avarage/population.length);
     return record;
   }
 
