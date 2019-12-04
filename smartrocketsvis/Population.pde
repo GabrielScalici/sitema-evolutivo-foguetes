@@ -97,7 +97,7 @@ class Population {
          avarage += population[i].getFitness();
        }
     }
-    println(avarage/population.length);
+    println(avarage/population.length );
     return record;
   }
 
