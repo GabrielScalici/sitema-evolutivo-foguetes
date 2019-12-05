@@ -40,3 +40,12 @@
 <p align="center">
   <img src="https://github.com/GabrielScalici/Rockets_Evolutivos/blob/master/visualization/animation.gif"/>
 </p>
+
+# Gráficos de desempenho para uma população de 40 indivíduos
+
+<p align="center">
+  <img src="https://github.com/GabrielScalici/Foguetes_Sistemas_Evolutivos/blob/master/images/avarage.png?raw=true"/>
+</p>
+<p align="center">
+  <img src="https://github.com/GabrielScalici/Foguetes_Sistemas_Evolutivos/blob/master/images/maxFitness.png?raw=true"/>
+</p>
